@@ -10,6 +10,8 @@ import router from './router'
 {{#vuex}}
 import store from './store/index.js'
 {{/vuex}}
+// 引入公共接口库
+import './request'
 {{#elementui}}
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
