@@ -37,19 +37,19 @@ module.exports = {
       when: 'isNotTest',
       type: 'string',
       required: true,
-      message: 'Project name',
+      message: '项目名称',
     },
     description: {
       when: 'isNotTest',
       type: 'string',
       required: false,
-      message: 'Project description',
+      message: '项目描述',
       default: '一个龙湖集团平台技术中心的pc端Vue项目',
     },
     author: {
       when: 'isNotTest',
       type: 'string',
-      message: 'Author',
+      message: '版权作者',
       default: 'longfor',
     },
     build: {
@@ -73,54 +73,33 @@ module.exports = {
     router: {
       when: 'isNotTest',
       type: 'confirm',
-      message: 'Install vue-router?',
+      message: '是否要加入 vue-router?',
     },
     vuex: {
       when: 'isNotTest',
       type: 'confirm',
-      message: 'Install vuex?',
+      message: '是否要加入 vuex?',
     },
     elementui: {
       when: 'isNotTest',
       type: 'confirm',
-      message: 'Install element-ui?',
+      message: '是否要加入 element-ui?',
     },
-    lint: {
-      when: 'isNotTest',
-      type: 'confirm',
-      message: 'Use ESLint to lint your code?',
+    multiport: {
+        when: 'isNotTest',
+        type: 'confirm',
+        message: '是否是多入口应用?',
     },
-    lintConfig: {
-      when: 'isNotTest && lint',
-      type: 'list',
-      message: 'Pick an ESLint preset',
-      choices: [
-        {
-          name: 'Standard (https://github.com/standard/standard)',
-          value: 'standard',
-          short: 'Standard',
-        },
-        {
-          name: 'Airbnb (https://github.com/airbnb/javascript)',
-          value: 'airbnb',
-          short: 'Airbnb',
-        },
-        {
-          name: 'none (configure it yourself)',
-          value: 'none',
-          short: 'none',
-        },
-      ],
-    },
+
     unit: {
       when: 'isNotTest',
       type: 'confirm',
-      message: 'Set up unit tests',
+      message: '是否需要单元测试？',
     },
     runner: {
       when: 'isNotTest && unit',
       type: 'list',
-      message: 'Pick a test runner',
+      message: '选择单元测试引擎',
       choices: [
         {
           name: 'Jest',
@@ -142,7 +121,7 @@ module.exports = {
     e2e: {
       when: 'isNotTest',
       type: 'confirm',
-      message: 'Setup e2e tests with Nightwatch?',
+      message: '是否需要Nightwatch的点对点测试(Setup e2e tests with Nightwatch)?',
     },
     autoInstall: {
       when: 'isNotTest',
@@ -169,8 +148,7 @@ module.exports = {
     },
   },
   filters: {
-    '.eslintrc.js': 'lint',
-    '.eslintignore': 'lint',
+
     'config/test.env.js': 'unit || e2e',
     'build/webpack.test.conf.js': "unit && runner === 'karma'",
     'test/unit/**/*': 'unit',

@@ -1,4 +1,4 @@
-/*************** state的Getter操作 ***************/
+/* ************** state的Getter操作 ***************/
 /**
  * state1
  * @param state
@@ -15,4 +15,3 @@ export const status1 = (state) => {
 export const status2 = (state) => {
   return state.status2
 }
-

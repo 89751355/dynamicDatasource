@@ -1,4 +1,4 @@
-/*************** mutation操作 ***************/
+/* ************** mutation操作 ***************/
 import * as types from './mutation-type'
 
 export default {
@@ -7,5 +7,5 @@ export default {
   },
   [types.SET_STATUS2] (state, status2) {
     state.status2 = status2
-  },
+  }
 }

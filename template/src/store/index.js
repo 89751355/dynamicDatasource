@@ -1,11 +1,11 @@
-/*************** vuex index文件 ***************/
+/* ************** vuex index文件 ***************/
 import vue from 'vue'
 import vuex from 'vuex'
 import state from './state.js'
 import * as getters from './getters.js'
 import mutations from './mutations.js'
 import actions from './actions.js'
-//import light from './modules/light.js'// 分组vuex
+// import light from './modules/light.js'// 分组vuex
 import createLogger from 'vuex/dist/logger' // 修改日志
 
 vue.use(vuex)
@@ -17,8 +17,8 @@ export default new vuex.Store({
   getters,
   mutations,
   actions,
-  /*modules: {
+  /* modules: {
     light
-  },*/
+  }, */
   plugins: debug ? [createLogger()] : [] // 开发环境下显示vuex的状态修改
 })
