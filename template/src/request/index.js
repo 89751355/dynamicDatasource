@@ -1,7 +1,7 @@
 /* ********************* request 全局配置文档 ************************/
 import Vue from 'vue'
 import axios from 'axios'
-import {BASE_URL} from 'api-type'
+import {BASE_URL} from './api-type'
 
 // 请求错误处理 注意根据具体的服务器端设置，此处仅仅是个示例
 const errorFn = err => {
