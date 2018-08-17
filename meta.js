@@ -44,12 +44,13 @@ module.exports = {
       type: 'string',
       required: false,
       message: 'Project description',
-      default: 'A Vue.js project',
+      default: '一个龙湖集团平台技术中心的pc端Vue项目',
     },
     author: {
       when: 'isNotTest',
       type: 'string',
       message: 'Author',
+      default: 'longfor',
     },
     build: {
       when: 'isNotTest',
@@ -73,6 +74,16 @@ module.exports = {
       when: 'isNotTest',
       type: 'confirm',
       message: 'Install vue-router?',
+    },
+    vuex: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install vuex?',
+    },
+    elementui: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install element-ui?',
     },
     lint: {
       when: 'isNotTest',
@@ -170,6 +181,7 @@ module.exports = {
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
+    'src/store/**/*': 'vuex',
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
