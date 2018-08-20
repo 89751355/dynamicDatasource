@@ -7,12 +7,25 @@ import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
+{{#vuex}}
+import store from './store/index.js'
+{{/vuex}}
+// 引入公共接口库
+import './request'
+{{#elementui}}
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
+{{/elementui}}
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  {{#vuex}}
+  store,
+  {{/vuex}}
   {{#router}}
   router,
   {{/router}}
